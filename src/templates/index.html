@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dist/output.css') }}"
+    />
+    <title>EduAgentAI</title>
+  </head>
+
+  <body class="bg-gray-50 min-h-screen px-6 py-10">
+    <script>
+      function updateSearchQuery(value) {
+        // Handle search query update
+        console.log(value);
+      }
+    </script>
+    <!-- banner -->
+    <div
+      class="h-[320px] w-full flex flex-col items-center justify-start pt-24 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20"
+    >
+      <h1
+        class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-4 leading-tight"
+      >
+        EduAgentAI
+      </h1>
+      <h2
+        class="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+      >
+        Your Learning Companion
+      </h2>
+    </div>
+
+     <!-- Previous Questions -->
+    <div
+      class="w-full px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-center"
+    >
+      <div class="bg-white rounded-lg shadow p-3 hover:shadow-md transition">
+      <h3 class="text-lg font-semibold mb-2">What is async in Python?</h3>
+      <p class="text-sm text-gray-600">Click to revisit this question.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow p-3 hover:shadow-md transition">
+      <h3 class="text-lg font-semibold mb-2">How to use Flask with Tailwind?</h3>
+      <p class="text-sm text-gray-600">Answered 2 days ago</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow p-3 hover:shadow-md transition">
+      <h3 class="text-lg font-semibold mb-2">Difference between sync and async?</h3>
+      <p class="text-sm text-gray-600">View full explanation</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-3 hover:shadow-md transition">
+      <h3 class="text-lg font-semibold mb-2">Difference between sync and async?</h3>
+      <p class="text-sm text-gray-600">View full explanation</p>
+    </div>
+
+  </div>
+
+    <div class="max-w-7xl mx-auto mt-12 flex flex-col lg:flex-row gap-8">
+      <!-- Search Area -->
+      <main class="w-full lg:w-[80%] bg-white p-6 rounded-lg shadow">
+        <h1 class="text-3xl font-bold mb-4">Targeted Q & A</h1>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Welcome to use EduAgentAI, your AI-powered learning assistant. You can
+          ask questions related to your courses.
+        </p>
+        <div class="relative">
+          <svg
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 3a8 8 0 100 16 8 8 0 000-16zM21 21l-4.35-4.35"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search async questions..."
+            class="pl-10 pr-4 py-2 w-full rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            id="searchInput"
+            oninput="updateSearchQuery(this.value)"
+          />
+        </div>
+      </main>
+
+      <!-- Aside Right -->
+      <aside class="w-full lg:w-[20%] bg-white p-3 rounded-lg shadow h-fit">
+        <h2 class="text-xl font-semibold mb-4">Previous lessons</h2>
+        <div class="space-y-4">
+          <div class="bg-gray-100 p-4 rounded-lg hover:bg-gray-200 transition">
+            <h3 class="text-lg font-medium mb-1">讲座 1</h3>
+            <p class="text-sm text-gray-600">介绍 async/await 的基础。</p>
+          </div>
+          <div class="bg-gray-100 p-4 rounded-lg hover:bg-gray-200 transition">
+            <h3 class="text-lg font-medium mb-1">讲座 2</h3>
+            <p class="text-sm text-gray-600">深入理解 Python 协程。</p>
+          </div>
+          <div class="bg-gray-100 p-4 rounded-lg hover:bg-gray-200 transition">
+            <h3 class="text-lg font-medium mb-1">讲座 3</h3>
+            <p class="text-sm text-gray-600">实战：构建异步 API。</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
